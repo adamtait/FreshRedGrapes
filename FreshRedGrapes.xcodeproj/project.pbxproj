@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61178629188CFB5200B99D20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61178628188CFB5200B99D20 /* Foundation.framework */; };
+		6117862B188CFB5200B99D20 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6117862A188CFB5200B99D20 /* CoreGraphics.framework */; };
+		6117862D188CFB5200B99D20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6117862C188CFB5200B99D20 /* UIKit.framework */; };
+		61178633188CFB5200B99D20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61178631188CFB5200B99D20 /* InfoPlist.strings */; };
+		61178635188CFB5200B99D20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178634188CFB5200B99D20 /* main.m */; };
+		61178639188CFB5200B99D20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178638188CFB5200B99D20 /* AppDelegate.m */; };
+		6117863C188CFB5200B99D20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6117863A188CFB5200B99D20 /* Main.storyboard */; };
+		6117863F188CFB5200B99D20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6117863E188CFB5200B99D20 /* ViewController.m */; };
+		61178641188CFB5200B99D20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61178640188CFB5200B99D20 /* Images.xcassets */; };
+		61178648188CFB5200B99D20 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61178647188CFB5200B99D20 /* XCTest.framework */; };
+		61178649188CFB5200B99D20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61178628188CFB5200B99D20 /* Foundation.framework */; };
+		6117864A188CFB5200B99D20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6117862C188CFB5200B99D20 /* UIKit.framework */; };
+		61178652188CFB5200B99D20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61178650188CFB5200B99D20 /* InfoPlist.strings */; };
+		61178654188CFB5200B99D20 /* FreshRedGrapesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178653188CFB5200B99D20 /* FreshRedGrapesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6117864B188CFB5200B99D20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6117861D188CFB5200B99D20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61178624188CFB5200B99D20;
+			remoteInfo = FreshRedGrapes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		61178625188CFB5200B99D20 /* FreshRedGrapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshRedGrapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61178628188CFB5200B99D20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6117862A188CFB5200B99D20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6117862C188CFB5200B99D20 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		61178630188CFB5200B99D20 /* FreshRedGrapes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreshRedGrapes-Info.plist"; sourceTree = "<group>"; };
+		61178632188CFB5200B99D20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		61178634188CFB5200B99D20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		61178636188CFB5200B99D20 /* FreshRedGrapes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FreshRedGrapes-Prefix.pch"; sourceTree = "<group>"; };
+		61178637188CFB5200B99D20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		61178638188CFB5200B99D20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6117863B188CFB5200B99D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6117863D188CFB5200B99D20 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6117863E188CFB5200B99D20 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		61178640188CFB5200B99D20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		61178646188CFB5200B99D20 /* FreshRedGrapesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshRedGrapesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61178647188CFB5200B99D20 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6117864F188CFB5200B99D20 /* FreshRedGrapesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreshRedGrapesTests-Info.plist"; sourceTree = "<group>"; };
+		61178651188CFB5200B99D20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		61178653188CFB5200B99D20 /* FreshRedGrapesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreshRedGrapesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61178622188CFB5200B99D20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6117862B188CFB5200B99D20 /* CoreGraphics.framework in Frameworks */,
+				6117862D188CFB5200B99D20 /* UIKit.framework in Frameworks */,
+				61178629188CFB5200B99D20 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61178643188CFB5200B99D20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61178648188CFB5200B99D20 /* XCTest.framework in Frameworks */,
+				6117864A188CFB5200B99D20 /* UIKit.framework in Frameworks */,
+				61178649188CFB5200B99D20 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6117861C188CFB5200B99D20 = {
+			isa = PBXGroup;
+			children = (
+				6117862E188CFB5200B99D20 /* FreshRedGrapes */,
+				6117864D188CFB5200B99D20 /* FreshRedGrapesTests */,
+				61178627188CFB5200B99D20 /* Frameworks */,
+				61178626188CFB5200B99D20 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		61178626188CFB5200B99D20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61178625188CFB5200B99D20 /* FreshRedGrapes.app */,
+				61178646188CFB5200B99D20 /* FreshRedGrapesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61178627188CFB5200B99D20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61178628188CFB5200B99D20 /* Foundation.framework */,
+				6117862A188CFB5200B99D20 /* CoreGraphics.framework */,
+				6117862C188CFB5200B99D20 /* UIKit.framework */,
+				61178647188CFB5200B99D20 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6117862E188CFB5200B99D20 /* FreshRedGrapes */ = {
+			isa = PBXGroup;
+			children = (
+				61178637188CFB5200B99D20 /* AppDelegate.h */,
+				61178638188CFB5200B99D20 /* AppDelegate.m */,
+				6117863A188CFB5200B99D20 /* Main.storyboard */,
+				6117863D188CFB5200B99D20 /* ViewController.h */,
+				6117863E188CFB5200B99D20 /* ViewController.m */,
+				61178640188CFB5200B99D20 /* Images.xcassets */,
+				6117862F188CFB5200B99D20 /* Supporting Files */,
+			);
+			path = FreshRedGrapes;
+			sourceTree = "<group>";
+		};
+		6117862F188CFB5200B99D20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61178630188CFB5200B99D20 /* FreshRedGrapes-Info.plist */,
+				61178631188CFB5200B99D20 /* InfoPlist.strings */,
+				61178634188CFB5200B99D20 /* main.m */,
+				61178636188CFB5200B99D20 /* FreshRedGrapes-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6117864D188CFB5200B99D20 /* FreshRedGrapesTests */ = {
+			isa = PBXGroup;
+			children = (
+				61178653188CFB5200B99D20 /* FreshRedGrapesTests.m */,
+				6117864E188CFB5200B99D20 /* Supporting Files */,
+			);
+			path = FreshRedGrapesTests;
+			sourceTree = "<group>";
+		};
+		6117864E188CFB5200B99D20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6117864F188CFB5200B99D20 /* FreshRedGrapesTests-Info.plist */,
+				61178650188CFB5200B99D20 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61178624188CFB5200B99D20 /* FreshRedGrapes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61178657188CFB5200B99D20 /* Build configuration list for PBXNativeTarget "FreshRedGrapes" */;
+			buildPhases = (
+				61178621188CFB5200B99D20 /* Sources */,
+				61178622188CFB5200B99D20 /* Frameworks */,
+				61178623188CFB5200B99D20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreshRedGrapes;
+			productName = FreshRedGrapes;
+			productReference = 61178625188CFB5200B99D20 /* FreshRedGrapes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		61178645188CFB5200B99D20 /* FreshRedGrapesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6117865A188CFB5200B99D20 /* Build configuration list for PBXNativeTarget "FreshRedGrapesTests" */;
+			buildPhases = (
+				61178642188CFB5200B99D20 /* Sources */,
+				61178643188CFB5200B99D20 /* Frameworks */,
+				61178644188CFB5200B99D20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6117864C188CFB5200B99D20 /* PBXTargetDependency */,
+			);
+			name = FreshRedGrapesTests;
+			productName = FreshRedGrapesTests;
+			productReference = 61178646188CFB5200B99D20 /* FreshRedGrapesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6117861D188CFB5200B99D20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Adam Tait";
+				TargetAttributes = {
+					61178645188CFB5200B99D20 = {
+						TestTargetID = 61178624188CFB5200B99D20;
+					};
+				};
+			};
+			buildConfigurationList = 61178620188CFB5200B99D20 /* Build configuration list for PBXProject "FreshRedGrapes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6117861C188CFB5200B99D20;
+			productRefGroup = 61178626188CFB5200B99D20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61178624188CFB5200B99D20 /* FreshRedGrapes */,
+				61178645188CFB5200B99D20 /* FreshRedGrapesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61178623188CFB5200B99D20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61178641188CFB5200B99D20 /* Images.xcassets in Resources */,
+				61178633188CFB5200B99D20 /* InfoPlist.strings in Resources */,
+				6117863C188CFB5200B99D20 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61178644188CFB5200B99D20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61178652188CFB5200B99D20 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61178621188CFB5200B99D20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6117863F188CFB5200B99D20 /* ViewController.m in Sources */,
+				61178639188CFB5200B99D20 /* AppDelegate.m in Sources */,
+				61178635188CFB5200B99D20 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61178642188CFB5200B99D20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61178654188CFB5200B99D20 /* FreshRedGrapesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6117864C188CFB5200B99D20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61178624188CFB5200B99D20 /* FreshRedGrapes */;
+			targetProxy = 6117864B188CFB5200B99D20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		61178631188CFB5200B99D20 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61178632188CFB5200B99D20 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6117863A188CFB5200B99D20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6117863B188CFB5200B99D20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		61178650188CFB5200B99D20 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61178651188CFB5200B99D20 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		61178655188CFB5200B99D20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		61178656188CFB5200B99D20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61178658188CFB5200B99D20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreshRedGrapes/FreshRedGrapes-Prefix.pch";
+				INFOPLIST_FILE = "FreshRedGrapes/FreshRedGrapes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		61178659188CFB5200B99D20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreshRedGrapes/FreshRedGrapes-Prefix.pch";
+				INFOPLIST_FILE = "FreshRedGrapes/FreshRedGrapes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6117865B188CFB5200B99D20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FreshRedGrapes.app/FreshRedGrapes";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreshRedGrapes/FreshRedGrapes-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FreshRedGrapesTests/FreshRedGrapesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6117865C188CFB5200B99D20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FreshRedGrapes.app/FreshRedGrapes";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreshRedGrapes/FreshRedGrapes-Prefix.pch";
+				INFOPLIST_FILE = "FreshRedGrapesTests/FreshRedGrapesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61178620188CFB5200B99D20 /* Build configuration list for PBXProject "FreshRedGrapes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61178655188CFB5200B99D20 /* Debug */,
+				61178656188CFB5200B99D20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61178657188CFB5200B99D20 /* Build configuration list for PBXNativeTarget "FreshRedGrapes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61178658188CFB5200B99D20 /* Debug */,
+				61178659188CFB5200B99D20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6117865A188CFB5200B99D20 /* Build configuration list for PBXNativeTarget "FreshRedGrapesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6117865B188CFB5200B99D20 /* Debug */,
+				6117865C188CFB5200B99D20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6117861D188CFB5200B99D20 /* Project object */;
+}
