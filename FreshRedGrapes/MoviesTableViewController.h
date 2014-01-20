@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MoviesTableViewController.h
 //  FreshRedGrapes
 //
 //  Created by Adam Tait on 1/19/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MoviesTableViewController : UITableViewController
 
 @end

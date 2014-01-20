@@ -14,13 +14,15 @@
 		61178635188CFB5200B99D20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178634188CFB5200B99D20 /* main.m */; };
 		61178639188CFB5200B99D20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178638188CFB5200B99D20 /* AppDelegate.m */; };
 		6117863C188CFB5200B99D20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6117863A188CFB5200B99D20 /* Main.storyboard */; };
-		6117863F188CFB5200B99D20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6117863E188CFB5200B99D20 /* ViewController.m */; };
 		61178641188CFB5200B99D20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61178640188CFB5200B99D20 /* Images.xcassets */; };
 		61178648188CFB5200B99D20 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61178647188CFB5200B99D20 /* XCTest.framework */; };
 		61178649188CFB5200B99D20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61178628188CFB5200B99D20 /* Foundation.framework */; };
 		6117864A188CFB5200B99D20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6117862C188CFB5200B99D20 /* UIKit.framework */; };
 		61178652188CFB5200B99D20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61178650188CFB5200B99D20 /* InfoPlist.strings */; };
 		61178654188CFB5200B99D20 /* FreshRedGrapesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178653188CFB5200B99D20 /* FreshRedGrapesTests.m */; };
+		6117865F188D040C00B99D20 /* MoviesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6117865E188D040C00B99D20 /* MoviesTableViewController.m */; };
+		61178662188D042C00B99D20 /* MoviesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178661188D042C00B99D20 /* MoviesDetailViewController.m */; };
+		E0398926D6474D4DBBAE901F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E936331126486AB85EB5E4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21E936331126486AB85EB5E4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		28C4BECF857F41989FD61262 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		61178625188CFB5200B99D20 /* FreshRedGrapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshRedGrapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61178628188CFB5200B99D20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6117862A188CFB5200B99D20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +49,16 @@
 		61178637188CFB5200B99D20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61178638188CFB5200B99D20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6117863B188CFB5200B99D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6117863D188CFB5200B99D20 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6117863E188CFB5200B99D20 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		61178640188CFB5200B99D20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		61178646188CFB5200B99D20 /* FreshRedGrapesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshRedGrapesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61178647188CFB5200B99D20 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6117864F188CFB5200B99D20 /* FreshRedGrapesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreshRedGrapesTests-Info.plist"; sourceTree = "<group>"; };
 		61178651188CFB5200B99D20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61178653188CFB5200B99D20 /* FreshRedGrapesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreshRedGrapesTests.m; sourceTree = "<group>"; };
+		6117865D188D040C00B99D20 /* MoviesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesTableViewController.h; sourceTree = "<group>"; };
+		6117865E188D040C00B99D20 /* MoviesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesTableViewController.m; sourceTree = "<group>"; };
+		61178660188D042C00B99D20 /* MoviesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesDetailViewController.h; sourceTree = "<group>"; };
+		61178661188D042C00B99D20 /* MoviesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 				6117862B188CFB5200B99D20 /* CoreGraphics.framework in Frameworks */,
 				6117862D188CFB5200B99D20 /* UIKit.framework in Frameworks */,
 				61178629188CFB5200B99D20 /* Foundation.framework in Frameworks */,
+				E0398926D6474D4DBBAE901F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +93,7 @@
 				6117864D188CFB5200B99D20 /* FreshRedGrapesTests */,
 				61178627188CFB5200B99D20 /* Frameworks */,
 				61178626188CFB5200B99D20 /* Products */,
+				28C4BECF857F41989FD61262 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +113,7 @@
 				6117862A188CFB5200B99D20 /* CoreGraphics.framework */,
 				6117862C188CFB5200B99D20 /* UIKit.framework */,
 				61178647188CFB5200B99D20 /* XCTest.framework */,
+				21E936331126486AB85EB5E4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,10 +124,12 @@
 				61178637188CFB5200B99D20 /* AppDelegate.h */,
 				61178638188CFB5200B99D20 /* AppDelegate.m */,
 				6117863A188CFB5200B99D20 /* Main.storyboard */,
-				6117863D188CFB5200B99D20 /* ViewController.h */,
-				6117863E188CFB5200B99D20 /* ViewController.m */,
 				61178640188CFB5200B99D20 /* Images.xcassets */,
 				6117862F188CFB5200B99D20 /* Supporting Files */,
+				6117865D188D040C00B99D20 /* MoviesTableViewController.h */,
+				6117865E188D040C00B99D20 /* MoviesTableViewController.m */,
+				61178660188D042C00B99D20 /* MoviesDetailViewController.h */,
+				61178661188D042C00B99D20 /* MoviesDetailViewController.m */,
 			);
 			path = FreshRedGrapes;
 			sourceTree = "<group>";
@@ -159,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61178657188CFB5200B99D20 /* Build configuration list for PBXNativeTarget "FreshRedGrapes" */;
 			buildPhases = (
+				7775B3AD4AF54A90BB8001C5 /* Check Pods Manifest.lock */,
 				61178621188CFB5200B99D20 /* Sources */,
 				61178622188CFB5200B99D20 /* Frameworks */,
 				61178623188CFB5200B99D20 /* Resources */,
+				9CE11AA32EE941749DE81025 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,13 +257,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7775B3AD4AF54A90BB8001C5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9CE11AA32EE941749DE81025 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		61178621188CFB5200B99D20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6117863F188CFB5200B99D20 /* ViewController.m in Sources */,
+				61178662188D042C00B99D20 /* MoviesDetailViewController.m in Sources */,
 				61178639188CFB5200B99D20 /* AppDelegate.m in Sources */,
+				6117865F188D040C00B99D20 /* MoviesTableViewController.m in Sources */,
 				61178635188CFB5200B99D20 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +422,7 @@
 		};
 		61178658188CFB5200B99D20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C4BECF857F41989FD61262 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -388,6 +436,7 @@
 		};
 		61178659188CFB5200B99D20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C4BECF857F41989FD61262 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -460,6 +509,7 @@
 				61178659188CFB5200B99D20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6117865A188CFB5200B99D20 /* Build configuration list for PBXNativeTarget "FreshRedGrapesTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +518,7 @@
 				6117865C188CFB5200B99D20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
