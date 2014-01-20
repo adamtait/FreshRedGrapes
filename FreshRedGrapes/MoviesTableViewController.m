@@ -9,6 +9,7 @@
 #import "MoviesTableViewController.h"
 #import "MoviesRequestOperationManager.h"
 #import "Movie.h"
+#import "MovieDetailCell.h"
 
 @interface MoviesTableViewController ()
 
@@ -63,12 +64,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"MoviesDetailCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    MovieDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     Movie *movie = (Movie *)self.movies[indexPath.row];
-    cell.textLabel.text  = movie.title;
-    
-    return cell;
+    return [cell initWithMovie:movie];
 }
 
 /*

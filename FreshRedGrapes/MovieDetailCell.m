@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Adam Tait. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "MovieDetailCell.h"
 
 @implementation MovieDetailCell
@@ -15,6 +16,17 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+    }
+    return self;
+}
+
+- (id)initWithMovie:(Movie *)movie
+{
+    self = [super init];
+    if (self) {
+        self.titleLabel.text = movie.title;
+        UIImage *poster = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:movie.posters.detailed]]];
+        [self.imageView initWithImage:poster];
     }
     return self;
 }
