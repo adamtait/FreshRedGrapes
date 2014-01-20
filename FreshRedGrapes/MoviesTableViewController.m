@@ -7,8 +7,12 @@
 //
 
 #import "MoviesTableViewController.h"
+#import "MoviesRequestOperationManager.h"
+#import "Movie.h"
 
 @interface MoviesTableViewController ()
+
+@property (nonatomic, strong) NSArray *movies;
 
 @end
 
@@ -18,8 +22,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
-        NSString *name = @"Adam Tait";
     }
     return self;
 }
@@ -28,8 +30,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        // Custom initialization
-        NSString *name = @"Adam Tait";
+        [MoviesRequestOperationManager makeRequestForMovies:self];
     }
     return self;
 }
@@ -53,16 +54,10 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return [self.movies count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,7 +65,8 @@
     static NSString *CellIdentifier = @"MoviesDetailCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    Movie *movie = (Movie *)self.movies[indexPath.row];
+    cell.textLabel.text  = movie.title;
     
     return cell;
 }
@@ -125,5 +121,14 @@
 }
 
  */
+
+#pragma movies
+
+- (void)loadMovies:(NSArray *)movies
+{
+    self.movies = movies;
+    [self.tableView reloadData];
+}
+
 
 @end

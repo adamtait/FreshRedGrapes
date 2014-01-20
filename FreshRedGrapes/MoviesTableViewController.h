@@ -10,4 +10,6 @@
 
 @interface MoviesTableViewController : UITableViewController
 
+- (void)loadMovies:(NSArray *)movies;
+
 @end

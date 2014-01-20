@@ -22,6 +22,11 @@
 		61178654188CFB5200B99D20 /* FreshRedGrapesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178653188CFB5200B99D20 /* FreshRedGrapesTests.m */; };
 		6117865F188D040C00B99D20 /* MoviesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6117865E188D040C00B99D20 /* MoviesTableViewController.m */; };
 		61178662188D042C00B99D20 /* MoviesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178661188D042C00B99D20 /* MoviesDetailViewController.m */; };
+		61178667188D112000B99D20 /* MoviesRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178666188D112000B99D20 /* MoviesRequestOperationManager.m */; };
+		6117866A188DCFAE00B99D20 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178669188DCFAE00B99D20 /* Movie.m */; };
+		6117866D188DD26E00B99D20 /* CastMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 6117866C188DD26E00B99D20 /* CastMember.m */; };
+		61178670188DD50900B99D20 /* Poster.m in Sources */ = {isa = PBXBuildFile; fileRef = 6117866F188DD50900B99D20 /* Poster.m */; };
+		61178673188DD85300B99D20 /* MovieDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178672188DD85300B99D20 /* MovieDetailCell.m */; };
 		E0398926D6474D4DBBAE901F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E936331126486AB85EB5E4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +64,16 @@
 		6117865E188D040C00B99D20 /* MoviesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesTableViewController.m; sourceTree = "<group>"; };
 		61178660188D042C00B99D20 /* MoviesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesDetailViewController.h; sourceTree = "<group>"; };
 		61178661188D042C00B99D20 /* MoviesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesDetailViewController.m; sourceTree = "<group>"; };
+		61178665188D112000B99D20 /* MoviesRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesRequestOperationManager.h; sourceTree = "<group>"; };
+		61178666188D112000B99D20 /* MoviesRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesRequestOperationManager.m; sourceTree = "<group>"; };
+		61178668188DCFAE00B99D20 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		61178669188DCFAE00B99D20 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		6117866B188DD26E00B99D20 /* CastMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastMember.h; sourceTree = "<group>"; };
+		6117866C188DD26E00B99D20 /* CastMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastMember.m; sourceTree = "<group>"; };
+		6117866E188DD50900B99D20 /* Poster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poster.h; sourceTree = "<group>"; };
+		6117866F188DD50900B99D20 /* Poster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poster.m; sourceTree = "<group>"; };
+		61178671188DD85300B99D20 /* MovieDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailCell.h; sourceTree = "<group>"; };
+		61178672188DD85300B99D20 /* MovieDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,15 +136,13 @@
 		6117862E188CFB5200B99D20 /* FreshRedGrapes */ = {
 			isa = PBXGroup;
 			children = (
+				61178664188D083500B99D20 /* Models */,
 				61178637188CFB5200B99D20 /* AppDelegate.h */,
 				61178638188CFB5200B99D20 /* AppDelegate.m */,
 				6117863A188CFB5200B99D20 /* Main.storyboard */,
 				61178640188CFB5200B99D20 /* Images.xcassets */,
 				6117862F188CFB5200B99D20 /* Supporting Files */,
-				6117865D188D040C00B99D20 /* MoviesTableViewController.h */,
-				6117865E188D040C00B99D20 /* MoviesTableViewController.m */,
-				61178660188D042C00B99D20 /* MoviesDetailViewController.h */,
-				61178661188D042C00B99D20 /* MoviesDetailViewController.m */,
+				61178663188D082A00B99D20 /* Views */,
 			);
 			path = FreshRedGrapes;
 			sourceTree = "<group>";
@@ -161,6 +174,34 @@
 				61178650188CFB5200B99D20 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61178663188D082A00B99D20 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6117865D188D040C00B99D20 /* MoviesTableViewController.h */,
+				6117865E188D040C00B99D20 /* MoviesTableViewController.m */,
+				61178660188D042C00B99D20 /* MoviesDetailViewController.h */,
+				61178661188D042C00B99D20 /* MoviesDetailViewController.m */,
+				61178671188DD85300B99D20 /* MovieDetailCell.h */,
+				61178672188DD85300B99D20 /* MovieDetailCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		61178664188D083500B99D20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				61178665188D112000B99D20 /* MoviesRequestOperationManager.h */,
+				61178666188D112000B99D20 /* MoviesRequestOperationManager.m */,
+				61178668188DCFAE00B99D20 /* Movie.h */,
+				61178669188DCFAE00B99D20 /* Movie.m */,
+				6117866B188DD26E00B99D20 /* CastMember.h */,
+				6117866C188DD26E00B99D20 /* CastMember.m */,
+				6117866E188DD50900B99D20 /* Poster.h */,
+				6117866F188DD50900B99D20 /* Poster.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,8 +336,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61178673188DD85300B99D20 /* MovieDetailCell.m in Sources */,
+				61178670188DD50900B99D20 /* Poster.m in Sources */,
+				6117866A188DCFAE00B99D20 /* Movie.m in Sources */,
 				61178662188D042C00B99D20 /* MoviesDetailViewController.m in Sources */,
+				61178667188D112000B99D20 /* MoviesRequestOperationManager.m in Sources */,
 				61178639188CFB5200B99D20 /* AppDelegate.m in Sources */,
+				6117866D188DD26E00B99D20 /* CastMember.m in Sources */,
 				6117865F188D040C00B99D20 /* MoviesTableViewController.m in Sources */,
 				61178635188CFB5200B99D20 /* main.m in Sources */,
 			);
