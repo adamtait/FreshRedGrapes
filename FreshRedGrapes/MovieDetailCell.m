@@ -25,7 +25,9 @@
     self = [super init];
     if (self) {
         self.titleLabel.text = movie.title;
-        UIImage *poster = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:movie.posters.detailed]]];
+        
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:movie.posters.thumbnail]];
+        UIImage *poster = [UIImage imageWithData:imageData];
         [self.imageView initWithImage:poster];
     }
     return self;

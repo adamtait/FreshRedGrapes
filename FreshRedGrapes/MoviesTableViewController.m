@@ -10,6 +10,7 @@
 #import "MoviesRequestOperationManager.h"
 #import "Movie.h"
 #import "MovieDetailCell.h"
+#import "MovieDetailViewController.h"
 
 @interface MoviesTableViewController ()
 
@@ -109,7 +110,6 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -117,9 +117,13 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"movie"]) {
+        MovieDetailViewController *controller = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        controller.movie = self.movies[indexPath.row];
+    }
 }
 
- */
 
 #pragma movies
 
