@@ -22,6 +22,7 @@
         self.criticsConsensus = [dictionary objectForKey:@"critics_consensus"];
         self.synopsis = [dictionary objectForKey:@"synopsis"];
         self.mpaaRating = [dictionary objectForKey:@"mpaa_rating"];
+        self.castMembers = [[NSMutableArray alloc] init];
         
         NSArray *castMembersArray = (NSArray *)[dictionary objectForKey:@"abridged_cast"];
         for (NSDictionary *actorDictionary in castMembersArray)

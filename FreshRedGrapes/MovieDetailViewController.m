@@ -13,8 +13,10 @@
 - (void)addNavigationTitle:(NSString *)titleText;
 - (void)addScrollView:(Movie *)movie;
 
-- (UILabel *)createTitleViewFromOrigin:(CGFloat)yOrigin title:(NSString *)title;
-- (UIView *)createImageViewFromOrigin:(CGFloat)yOrigin imageURL:(NSString *)imageURL;
+- (CGFloat)addTitleViewAsSubview:(UIScrollView *)view yOrigin:(CGFloat)yOrigin title:(NSString *)title;
+- (CGFloat)addImageViewAsSubview:(UIScrollView *)view yOrigin:(CGFloat)yOrigin imageURL:(NSString *)imageURL;
+- (CGFloat)addShortLabelViewAsSubview:(UIScrollView *)view yOrigin:(CGFloat)yOrigin name:(NSString *)name value:(NSString *)value;
+- (CGFloat)addLongLabelViewAsSubview:(UIScrollView *)view yOrigin:(CGFloat)yOrigin name:(NSString *)name value:(NSString *)value;
 
 @end
 
@@ -73,36 +75,54 @@
 
 - (void)addScrollView:(Movie *)movie
 {
-    UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    scroll.pagingEnabled = YES;
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    scrollView.pagingEnabled = YES;
     
-    UILabel *titleView = [self createTitleViewFromOrigin:10 title:self.movie.title];
-    [scroll addSubview:titleView];
+    NSMutableArray *subviewHeights = [[NSMutableArray alloc] init];
+    [subviewHeights addObject:[NSNumber numberWithFloat:[self addTitleViewAsSubview:scrollView yOrigin:10.0 title:self.movie.title]]];
     
-    UIView *imageView = [self createImageViewFromOrigin:50 imageURL:self.movie.posters.detailed];
-    [scroll addSubview:imageView];
+    CGFloat nextOrigin = 50.0;
+    [subviewHeights addObject:[NSNumber numberWithFloat:[self addImageViewAsSubview:scrollView yOrigin:nextOrigin imageURL:self.movie.posters.detailed]]];
+    
+    nextOrigin = (nextOrigin + [[subviewHeights lastObject] floatValue] + 15.0);
+    [subviewHeights addObject:[NSNumber numberWithFloat:[self addShortLabelViewAsSubview:scrollView yOrigin:nextOrigin name:@"MPAA Rating" value:self.movie.mpaaRating]]];
 
-    scroll.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height * 2);
-    [self.view addSubview:scroll];
+    nextOrigin = (nextOrigin + [[subviewHeights lastObject] floatValue] + 15.0);
+    NSString *actorsNames = [self.movie.getActorsNames componentsJoinedByString:@", "];
+    [subviewHeights addObject:[NSNumber numberWithFloat:[self addLongLabelViewAsSubview:scrollView yOrigin:nextOrigin name:@"Actors" value:actorsNames]]];
+    
+    nextOrigin = (nextOrigin + [[subviewHeights lastObject] floatValue] + 15.0);
+    [subviewHeights addObject:[NSNumber numberWithFloat:[self addLongLabelViewAsSubview:scrollView yOrigin:nextOrigin name:@"Synopsis" value:self.movie.synopsis]]];
+    
+    
+    CGFloat totalheight = 0.0;
+    for (NSNumber *height in subviewHeights)
+    {
+        totalheight = totalheight + [height floatValue];
+    }
+    
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, (totalheight + 200));
+    [self.view addSubview:scrollView];
 }
 
 
 #pragma create sub views
 
-- (UILabel *)createTitleViewFromOrigin:(CGFloat)yOrigin title:(NSString *)title
+- (CGFloat)addTitleViewAsSubview:(UIScrollView *)view yOrigin:(CGFloat)yOrigin title:(NSString *)title
 {
-    CGSize requestedTitleSize = [title sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:26.0f]}];
+    CGSize estimatedSize = [title sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:26.0f]}];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, yOrigin, self.view.frame.size.width, requestedTitleSize.height)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, yOrigin, self.view.frame.size.width, estimatedSize.height)];
     titleLabel.text = title;
     titleLabel.font = [UIFont fontWithName:@"Helvetica" size:26];
     titleLabel.adjustsFontSizeToFitWidth = YES;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     
-    return titleLabel;
+    [view addSubview:titleLabel];
+    return estimatedSize.height;
 }
 
-- (UIView *)createImageViewFromOrigin:(CGFloat)yOrigin imageURL:(NSString *)imageURL
+- (CGFloat)addImageViewAsSubview:(UIScrollView *)view yOrigin:(CGFloat)yOrigin imageURL:(NSString *)imageURL
 {
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
     UIImage *poster = [UIImage imageWithData:imageData];
@@ -111,7 +131,59 @@
     CGFloat xOrigin = (self.view.frame.size.width - poster.size.width) / 2;
     imageView.frame = CGRectMake(xOrigin, yOrigin, poster.size.width, poster.size.height);
     
-    return imageView;
+    [view addSubview:imageView];
+    return poster.size.height;
+}
+
+- (CGFloat)addShortLabelViewAsSubview:(UIScrollView *)view yOrigin:(CGFloat)yOrigin name:(NSString *)name value:(NSString *)value
+{
+    CGSize estimatedNameSize = [name sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:20.0f]}];
+    CGSize estimatedValueSize = [value sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:20.0f]}];
+    
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, (estimatedNameSize.width + 15), estimatedNameSize.height)];
+    nameLabel.text = [name stringByAppendingString:@":"];
+    nameLabel.font = [UIFont fontWithName:@"Helvetica" size:20];
+    
+    UILabel *valueLabel = [[UILabel alloc] initWithFrame:CGRectMake((estimatedNameSize.width + 20), 0, (self.view.frame.size.width - estimatedNameSize.width - 20), estimatedValueSize.height)];
+    valueLabel.text = value;
+    valueLabel.font = [UIFont fontWithName:@"Helvetica" size:20];
+    
+    UIView *labelView = [[UIView alloc] initWithFrame:CGRectMake(0, yOrigin, self.view.frame.size.width, estimatedValueSize.height)];
+    [labelView addSubview:nameLabel];
+    [labelView addSubview:valueLabel];
+    
+    [view addSubview:labelView];
+    return estimatedValueSize.height;
+}
+
+- (CGFloat)addLongLabelViewAsSubview:(UIScrollView *)view yOrigin:(CGFloat)yOrigin name:(NSString *)name value:(NSString *)value
+{
+    CGSize estimatedNameSize = [name sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:20.0f]}];
+    
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, (self.view.frame.size.width - 10), estimatedNameSize.height)];
+    nameLabel.text = [name stringByAppendingString:@":"];
+    nameLabel.font = [UIFont fontWithName:@"Helvetica" size:20];
+    
+    
+    CGSize estimatedValueSize = [value sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16.0f]}];
+    CGFloat valueLabelWidth = (self.view.frame.size.width - 10);
+    int numberOfLines = ceilf(estimatedValueSize.width / valueLabelWidth);
+    CGFloat valueLabelHeight = estimatedValueSize.height * numberOfLines;
+    NSLog(@"valueLabel width / %0.2f / height / %0.2f / number of lines / %d /", valueLabelWidth, valueLabelHeight, numberOfLines);
+
+    UILabel *valueLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, (estimatedNameSize.height + 5), valueLabelWidth, valueLabelHeight)];
+    valueLabel.text = value;
+    valueLabel.font = [UIFont fontWithName:@"Helvetica" size:16];
+    valueLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    valueLabel.preferredMaxLayoutWidth = valueLabelWidth;
+    valueLabel.numberOfLines = numberOfLines;
+    
+    UIView *labelView = [[UIView alloc] initWithFrame:CGRectMake(0, yOrigin, self.view.frame.size.width, estimatedValueSize.height)];
+    [labelView addSubview:nameLabel];
+    [labelView addSubview:valueLabel];
+    
+    [view addSubview:labelView];
+    return valueLabelHeight + estimatedNameSize.height + 5.0;
 }
 
 @end
