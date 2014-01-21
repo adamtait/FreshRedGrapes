@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "MovieDetailCell.h"
+#import "UIImageView+AFNetworking.h"
+#import <AFNetworking.h>
 
 @implementation MovieDetailCell
 
@@ -26,9 +28,17 @@
     if (self) {
         self.titleLabel.text = movie.title;
         
-        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:movie.posters.thumbnail]];
-        UIImage *poster = [UIImage imageWithData:imageData];
-        [self.imageView initWithImage:poster];
+        [self.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:movie.posters.thumbnail]]
+                        placeholderImage:[UIImage imageNamed:@"none"]
+                        success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                               self.imageView.alpha = 0.0;
+                               self.imageView.image = image;
+                               [UIView animateWithDuration:0.25
+                                                animations:^{
+                                                    self.imageView.alpha = 1.0;
+                                                }];
+                           }
+                           failure:NULL];
     }
     return self;
 }
