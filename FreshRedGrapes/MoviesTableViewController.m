@@ -117,7 +117,7 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"movie"]) {
+    if ([segue.identifier isEqualToString:@"toMovieDetails"]) {
         MovieDetailViewController *controller = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         controller.movie = self.movies[indexPath.row];

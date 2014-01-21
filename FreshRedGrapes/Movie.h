@@ -22,4 +22,6 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
+- (NSMutableArray *)getActorsNames;
+
 @end

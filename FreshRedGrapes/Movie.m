@@ -24,13 +24,24 @@
         self.mpaaRating = [dictionary objectForKey:@"mpaa_rating"];
         
         NSArray *castMembersArray = (NSArray *)[dictionary objectForKey:@"abridged_cast"];
-        for (NSDictionary *actorDictionary in castMembersArray) {
+        for (NSDictionary *actorDictionary in castMembersArray)
+        {
             [self.castMembers addObject:[[CastMember alloc] initWithDictionary:actorDictionary]];
         }
         
         self.posters = [[Poster alloc] initWithDictionary:(NSDictionary *)[dictionary objectForKey:@"posters"]];
     }
     return self;
+}
+
+- (NSMutableArray *)getActorsNames
+{
+    NSMutableArray *actorsNames = [[NSMutableArray alloc] init];
+    for (CastMember *cast in self.castMembers)
+    {
+        [actorsNames addObject:cast.actorName];
+    }
+    return actorsNames;
 }
 
 @end

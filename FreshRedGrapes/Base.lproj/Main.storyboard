@@ -37,7 +37,7 @@
                                 <connections>
                                     <outlet property="imageView" destination="0T4-ST-pnK" id="F42-7M-3XC"/>
                                     <outlet property="titleLabel" destination="zbT-kz-SBC" id="J2r-Rb-eOO"/>
-                                    <segue destination="Ltc-PX-MdJ" kind="push" id="5z5-pV-VE7"/>
+                                    <segue destination="Ltc-PX-MdJ" kind="push" identifier="toMovieDetails" id="5z5-pV-VE7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,79 +48,20 @@
             </objects>
             <point key="canvasLocation" x="782" y="-301"/>
         </scene>
-        <!--Movies Detail View Controller - Movie Details-->
+        <!--Movie Detail View Controller - Movie Details-->
         <scene sceneID="v8y-up-v1p">
             <objects>
-                <viewController id="Ltc-PX-MdJ" customClass="MoviesDetailViewController" sceneMemberID="viewController">
+                <viewController id="Ltc-PX-MdJ" customClass="MovieDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ftB-mC-PmT"/>
                         <viewControllerLayoutGuide type="bottom" id="1X8-P7-Ouj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="itZ-Ld-cm8" customClass="MovieDetailScrollView">
+                    <view key="view" contentMode="scaleToFill" id="itZ-Ld-cm8" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToF-nj-Oss">
-                                <rect key="frame" x="20" y="86" width="280" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hwa-WB-GKg">
-                                <rect key="frame" x="27" y="131" width="267" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVh-0Q-ni8">
-                                <rect key="frame" x="20" y="328" width="55" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Synopsis:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFm-DF-ysR">
-                                <rect key="frame" x="20" y="410" width="75" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Actors:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxl-cH-2do">
-                                <rect key="frame" x="20" y="371" width="55" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rating value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCH-Bd-PQQ">
-                                <rect key="frame" x="83" y="328" width="151" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="actors list" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MR-qc-vdk">
-                                <rect key="frame" x="83" y="371" width="217" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="synopsis content" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="rek-If-rZX">
-                                <rect key="frame" x="20" y="439" width="280" height="175"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="actorsListLabel" destination="0MR-qc-vdk" id="uFO-AS-xRf"/>
-                            <outlet property="imageView" destination="Hwa-WB-GKg" id="Ixn-WG-emN"/>
-                            <outlet property="ratingLabel" destination="mCH-Bd-PQQ" id="0Ew-WU-ESa"/>
-                            <outlet property="synopsisLabel" destination="rek-If-rZX" id="uGF-Hi-3cP"/>
-                            <outlet property="titleLabel" destination="ToF-nj-Oss" id="lML-C1-XUR"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Movie Details" id="QXS-Fx-xDI"/>
-                    <connections>
-                        <outlet property="imageView" destination="Hwa-WB-GKg" id="2g5-CN-jlB"/>
-                        <outlet property="titleLabel" destination="ToF-nj-Oss" id="1j4-9y-Wg6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efh-Tw-lIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
