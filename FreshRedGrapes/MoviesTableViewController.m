@@ -11,6 +11,7 @@
 #import "Movie.h"
 #import "MovieDetailCell.h"
 #import "MovieDetailViewController.h"
+#import "MBProgressHUD.h"
 
 @interface MoviesTableViewController ()
 
@@ -32,7 +33,9 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [MoviesRequestOperationManager makeRequestForMovies:self];
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+            [MoviesRequestOperationManager makeRequestForMovies:self];
+        });
     }
     return self;
 }
@@ -46,6 +49,11 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    if (self.movies == NULL)
+    {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -131,6 +139,9 @@
 {
     self.movies = movies;
     [self.tableView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
 }
 
 
