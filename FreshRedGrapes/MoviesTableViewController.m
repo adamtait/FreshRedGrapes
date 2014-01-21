@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) NSArray *movies;
 
+- (void)refresh:(UIRefreshControl *)sender;
+
 @end
 
 @implementation MoviesTableViewController
@@ -50,6 +52,11 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+//    [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self setRefreshControl:refreshControl];
     
     if (self.movies == NULL)
     {
@@ -135,9 +142,17 @@
 
 - (void)networkError
 {
+    [self.refreshControl endRefreshing];
     [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Network error"
                                                    description:@"the internet is unreachable"
                                                           type:TWMessageBarMessageTypeError];
+}
+
+- (void)refresh:(UIRefreshControl *)sender
+{
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        [MoviesRequestOperationManager makeRequestForMovies:self];
+    });
 }
 
 
@@ -150,6 +165,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     });
+    [self.refreshControl endRefreshing];
 }
 
 
