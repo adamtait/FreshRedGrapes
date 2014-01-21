@@ -21,7 +21,6 @@
 		61178652188CFB5200B99D20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61178650188CFB5200B99D20 /* InfoPlist.strings */; };
 		61178654188CFB5200B99D20 /* FreshRedGrapesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178653188CFB5200B99D20 /* FreshRedGrapesTests.m */; };
 		6117865F188D040C00B99D20 /* MoviesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6117865E188D040C00B99D20 /* MoviesTableViewController.m */; };
-		61178662188D042C00B99D20 /* MoviesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178661188D042C00B99D20 /* MoviesDetailViewController.m */; };
 		61178667188D112000B99D20 /* MoviesRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178666188D112000B99D20 /* MoviesRequestOperationManager.m */; };
 		6117866A188DCFAE00B99D20 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 61178669188DCFAE00B99D20 /* Movie.m */; };
 		6117866D188DD26E00B99D20 /* CastMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 6117866C188DD26E00B99D20 /* CastMember.m */; };
@@ -64,8 +63,6 @@
 		61178653188CFB5200B99D20 /* FreshRedGrapesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreshRedGrapesTests.m; sourceTree = "<group>"; };
 		6117865D188D040C00B99D20 /* MoviesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesTableViewController.h; sourceTree = "<group>"; };
 		6117865E188D040C00B99D20 /* MoviesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesTableViewController.m; sourceTree = "<group>"; };
-		61178660188D042C00B99D20 /* MoviesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesDetailViewController.h; sourceTree = "<group>"; };
-		61178661188D042C00B99D20 /* MoviesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesDetailViewController.m; sourceTree = "<group>"; };
 		61178665188D112000B99D20 /* MoviesRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesRequestOperationManager.h; sourceTree = "<group>"; };
 		61178666188D112000B99D20 /* MoviesRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesRequestOperationManager.m; sourceTree = "<group>"; };
 		61178668188DCFAE00B99D20 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
@@ -189,8 +186,6 @@
 				6142CE47188DF13300FBADAE /* MovieDetailViewController.m */,
 				6117865D188D040C00B99D20 /* MoviesTableViewController.h */,
 				6117865E188D040C00B99D20 /* MoviesTableViewController.m */,
-				61178660188D042C00B99D20 /* MoviesDetailViewController.h */,
-				61178661188D042C00B99D20 /* MoviesDetailViewController.m */,
 				61178671188DD85300B99D20 /* MovieDetailCell.h */,
 				61178672188DD85300B99D20 /* MovieDetailCell.m */,
 				61178674188DEF7000B99D20 /* MovieDetailScrollView.h */,
@@ -351,7 +346,6 @@
 				61178670188DD50900B99D20 /* Poster.m in Sources */,
 				6142CE48188DF13300FBADAE /* MovieDetailViewController.m in Sources */,
 				6117866A188DCFAE00B99D20 /* Movie.m in Sources */,
-				61178662188D042C00B99D20 /* MoviesDetailViewController.m in Sources */,
 				61178667188D112000B99D20 /* MoviesRequestOperationManager.m in Sources */,
 				61178639188CFB5200B99D20 /* AppDelegate.m in Sources */,
 				6117866D188DD26E00B99D20 /* CastMember.m in Sources */,

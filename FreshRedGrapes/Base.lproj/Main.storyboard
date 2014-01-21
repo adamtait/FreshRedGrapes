@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="782" y="-301"/>
         </scene>
-        <!--Movies Detail View Controller-->
+        <!--Movies Detail View Controller - Movie Details-->
         <scene sceneID="v8y-up-v1p">
             <objects>
                 <viewController id="Ltc-PX-MdJ" customClass="MoviesDetailViewController" sceneMemberID="viewController">
@@ -100,7 +100,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rek-If-rZX">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="synopsis content" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="rek-If-rZX">
                                 <rect key="frame" x="20" y="439" width="280" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -116,7 +116,7 @@
                             <outlet property="titleLabel" destination="ToF-nj-Oss" id="lML-C1-XUR"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="QXS-Fx-xDI"/>
+                    <navigationItem key="navigationItem" title="Movie Details" id="QXS-Fx-xDI"/>
                     <connections>
                         <outlet property="imageView" destination="Hwa-WB-GKg" id="2g5-CN-jlB"/>
                         <outlet property="titleLabel" destination="ToF-nj-Oss" id="1j4-9y-Wg6"/>
