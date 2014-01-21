@@ -7,6 +7,7 @@
 //
 
 #import "MovieDetailViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MovieDetailViewController ()
 
@@ -124,15 +125,23 @@
 
 - (CGFloat)addImageViewAsSubview:(UIScrollView *)view yOrigin:(CGFloat)yOrigin imageURL:(NSString *)imageURL
 {
-    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
-    UIImage *poster = [UIImage imageWithData:imageData];
-    
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:poster];
-    CGFloat xOrigin = (self.view.frame.size.width - poster.size.width) / 2;
-    imageView.frame = CGRectMake(xOrigin, yOrigin, poster.size.width, poster.size.height);
-    
-    [view addSubview:imageView];
-    return poster.size.height;
+    UIImageView *imageView = [[UIImageView alloc] init];
+    [imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:imageURL]]
+                          placeholderImage:[UIImage imageNamed:@"none"]
+                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                       imageView.alpha = 0.0;
+                                       imageView.image = image;
+                                       [UIView animateWithDuration:0.25
+                                                        animations:^{
+                                                            imageView.alpha = 1.0;
+                                                        }];
+                                       CGFloat xOrigin = (self.view.frame.size.width - image.size.width) / 2;
+                                       imageView.frame = CGRectMake(xOrigin, yOrigin, image.size.width, image.size.height);
+                                       
+                                       [view addSubview:imageView];
+                                   }
+                                   failure:NULL];
+    return 180.0;
 }
 
 - (CGFloat)addShortLabelViewAsSubview:(UIScrollView *)view yOrigin:(CGFloat)yOrigin name:(NSString *)name value:(NSString *)value

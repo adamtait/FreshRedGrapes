@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MovieDetailCell.h"
 #import "UIImageView+AFNetworking.h"
-#import <AFNetworking.h>
 
 @implementation MovieDetailCell
 
