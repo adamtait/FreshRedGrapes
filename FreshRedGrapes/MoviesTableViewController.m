@@ -12,6 +12,7 @@
 #import "MovieDetailCell.h"
 #import "MovieDetailViewController.h"
 #import "MBProgressHUD.h"
+#import "TWMessageBarManager.h"
 
 @interface MoviesTableViewController ()
 
@@ -130,6 +131,13 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         controller.movie = self.movies[indexPath.row];
     }
+}
+
+- (void)networkError
+{
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Network error"
+                                                   description:@"the internet is unreachable"
+                                                          type:TWMessageBarMessageTypeError];
 }
 
 
